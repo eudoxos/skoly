@@ -4,12 +4,13 @@ apt update
 apt -y dist-upgrade
 apt install webext-ublock-origin
 # add zoom, teams, lowriter, loimpress, firefox launchers to the panel
-APPLETSRC=plasma-org.kde.plasma.desktop-appletsrc
-echo > ~/.config/$APPLETSRC <<END
+APPLETSRC=~/.config/plasma-org.kde.plasma.desktop-appletsrc
+cp $APPLETSRC $APPLETSRC~
+echo > $APPLETSRC <<END
 [Containments][0][Applets][xx][Configuration
 localPath=...
 url=...
 
 
 END
-cp ~/.config/$APPLETSRC /etc/skel/.config/
+cp $APPLETSRC /etc/skel/.config/
