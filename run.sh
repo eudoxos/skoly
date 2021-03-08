@@ -1,5 +1,6 @@
 #!/bin/bash
-# run this script with sudo
+set -e -x
+# run with usod or be asked for pwd here
 snap install zoom-client teams
 apt update
 apt -y dist-upgrade
