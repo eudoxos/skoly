@@ -17,7 +17,7 @@ wget https://github.com/eudoxos/skoly/raw/main/$APPLETS_CFG -O /etc/skel/.config
 # see https://askubuntu.com/a/1193560/24839
 # and https://help.gnome.org/admin/system-admin-guide/stable/dconf-custom-defaults.html.en
 # gsettings set org.gnome.shell favorite-apps ""
-echo -e "user-db:user\nsystem-db:local\n" >> /etc/dconf/profile/user
+echo -e "user-db:user\nsystem-db:local\n" > /etc/dconf/profile/user
 mkdir -p /etc/dconf/db/local.d
 echo > /etc/dconf/db/local.d/10-skoly-default-favorites <<FAVORITES
 [org/gnome/shell]
