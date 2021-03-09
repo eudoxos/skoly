@@ -19,9 +19,9 @@ wget https://github.com/eudoxos/skoly/raw/main/$APPLETS_CFG -O /etc/skel/.config
 # gsettings set org.gnome.shell favorite-apps ""
 echo -e "user-db:user\nsystem-db:local\n" >> /etc/dconf/profile/user
 mkdir -p /etc/dconf/db/local.d
-echo <<FAVORITES
+echo > /etc/dconf/db/local.d/10-skoly-default-favorites <<FAVORITES
 [org/gnome/shell]
-favorite-apps=['firefox.desktop','org.gnome.Nautilus.desktop','libreoffice-writer.desktop','libreoffice-impress.desktop','','','snap-store_ubuntu-software.desktop','yelp.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop','firefox.desktop','teams_teams.desktop','zoom-client_zoom-client.desktop','libreoffice-writer.desktop','libreoffice-impress.desktop','snap-store_ubuntu-software.desktop','yelp.desktop']
 FAVORITES
 dconfig update
 ## most laptops don't need this
