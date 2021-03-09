@@ -11,6 +11,7 @@ apt install $(check-language-support)
 # add zoom, teams, lowriter, loimpress, firefox launchers to the panel
 # just put the config file from github to /etc/skel for new users
 APPLETS_CFG=plasma-org.kde.plasma.desktop-appletsrc
+mkdir -p /etc/skel/.config
 wget https://github.com/eudoxos/skoly/raw/main/$APPLETS_CFG -O /etc/skel/.config/$APPLETS_CFG
 ## this is for gnome-shell
 # see https://askubuntu.com/a/1193560/24839
