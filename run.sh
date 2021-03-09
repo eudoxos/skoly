@@ -5,6 +5,8 @@ snap install zoom-client teams
 apt update
 apt -y dist-upgrade
 apt install -y webext-ublock-origin vim
+# install full language support
+apt install $(check-language-support)
 ## this is for KDE Plasma
 # add zoom, teams, lowriter, loimpress, firefox launchers to the panel
 # just put the config file from github to /etc/skel for new users
