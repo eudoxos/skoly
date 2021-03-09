@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e -x
 [ `id -u` -eq 0 ] || ( echo Must be run with sudo, exiting. && exit 1)
-snap install zoom-client teams
+# make script idempotent (snap install fails if already installed)
+snap list zoom-client || snap install zoom-client
+snap list teams || snap install teams
+# 
 apt update
 apt -y dist-upgrade
 apt install -y webext-ublock-origin vim
