@@ -23,7 +23,7 @@ echo > /etc/dconf/db/local.d/10-skoly-default-favorites <<FAVORITES
 [org/gnome/shell]
 favorite-apps=['org.gnome.Nautilus.desktop','firefox.desktop','teams_teams.desktop','zoom-client_zoom-client.desktop','libreoffice-writer.desktop','libreoffice-impress.desktop','snap-store_ubuntu-software.desktop','yelp.desktop']
 FAVORITES
-dconfig update
+dconf update
 ## most laptops don't need this
 ##
 # apt install -y lm-sensors fancontrol
