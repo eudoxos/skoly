@@ -7,6 +7,7 @@ git clone https://github.com/patjak/facetimehd-firmware.git
 cd facetimehd-firmware
 make
 sudo make install
+cd ..
 
 ## firmware data (already extracted in this repo)
 sudo cp firmware/*.dat /usr/lib/firmware/facetimehd
@@ -16,6 +17,8 @@ git clone https://github.com/patjak/bcwc_pcie.git
 cd bcwc_pcie
 make
 sudo make install
+cd ..
+
 # you may get SSL errors, but it appears these are safe to ignore
 sudo depmod
 sudo modprobe -r bdc_pci
