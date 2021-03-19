@@ -3,7 +3,7 @@ set -e -x
 sudo apt install -y curl git unrar
 
 ## firmware loader
-git clone https://github.com/patjak/facetimehd-firmware.git
+[ -d facetimehd-firmware ] || git clone https://github.com/patjak/facetimehd-firmware.git
 cd facetimehd-firmware
 make
 sudo make install
@@ -13,7 +13,7 @@ cd ..
 sudo cp firmware/*.dat /usr/lib/firmware/facetimehd
 
 ## driver
-git clone https://github.com/patjak/bcwc_pcie.git
+[ -d bcwc_pcie ] || git clone https://github.com/patjak/bcwc_pcie.git
 cd bcwc_pcie
 make
 sudo make install
